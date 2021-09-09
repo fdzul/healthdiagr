@@ -107,3 +107,5 @@ mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
                   cve_def = NULL)
 
 ```
+
+
