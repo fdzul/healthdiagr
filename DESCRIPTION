@@ -19,3 +19,4 @@ Suggests:
     rmarkdown,
     knitr
 VignetteBuilder: knitr
+License: MIT + file LICENSE
