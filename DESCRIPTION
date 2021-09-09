@@ -22,4 +22,8 @@ VignetteBuilder: knitr
 License: MIT + file LICENSE
 Imports: 
     remotes,
-    devtools
+    devtools,
+    dplyr,
+    stringr,
+    tidyr,
+    kableExtra
