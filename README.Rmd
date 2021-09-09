@@ -25,7 +25,7 @@ The goal of healthdiagr is to ...
 You can install the released version of healthdiagr from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("healthdiagr")
+#install.packages("healthdiagr")
 ```
 
 ## Example

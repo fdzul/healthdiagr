@@ -22,7 +22,7 @@ You can install the released version of healthdiagr from
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(healthdiagr)
+library(healthdiagr)
 ## basic example code
 ```
 
