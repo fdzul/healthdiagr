@@ -57,3 +57,53 @@ mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
                   cve_def = NULL)
 
 ```
+
+
+## **<span style="color:#003300;">Mortalidad Infantil del Estado de Puebla 2018</span>**
+
+```{r,  warning=FALSE, message=FALSE}
+mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
+                  year = 2019, 
+                  cve_edo = "21",
+                  static_map = TRUE, 
+                  cat_group = "infantil",
+                  cve_def = NULL)
+
+```
+
+## **<span style="color:#003300;">Mortalidad Pediátrica del Estado de Puebla 2018</span>**
+
+```{r,  warning=FALSE, message=FALSE}
+mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
+                  year = 2019, 
+                  cve_edo = "21",
+                  static_map = TRUE, 
+                  cat_group = "pediatrica",
+                  cve_def = NULL)
+
+```
+
+
+## **<span style="color:#003300;">Mortalidad en edad Productiva del Estado de Puebla 2018</span>**
+
+```{r,  warning=FALSE, message=FALSE}
+mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
+                  year = 2019, 
+                  cve_edo = "21",
+                  static_map = TRUE, 
+                  cat_group = "productiva",
+                  cve_def = NULL)
+
+```
+
+## **<span style="color:#003300;">Mortalidad en edad posproductiva del Estado de Puebla 2018</span>**
+
+```{r,  warning=FALSE, message=FALSE}
+mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
+                  year = 2019, 
+                  cve_edo = "21",
+                  static_map = TRUE, 
+                  cat_group = "post_productiva",
+                  cve_def = NULL)
+
+```
