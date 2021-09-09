@@ -28,6 +28,7 @@ Las secretarías de salud de los estados o municipios, cuando realizan un diagn�
 Para calcular todas estas tables (excepto mortalidad materna), se usarán los siguientes funciones *mort_year_edo_dt*, *mort_year_mpo_dt* y *mort_year_loc_dt* para calcular las tablas a nivel de estado, municipio o localidad, respectivamente.
 
 
+# Mortalidad por Estado
 
 ## Mortalidad general del Estado de Puebla 2012 a 2019
 ```{r}
@@ -47,7 +48,7 @@ mort_year_edo_dt(dataset = mortalidad_general_21,
 ```
 
 
-## Mortalidad para la población productiva 2012-2019
+## Mortalidad para la población productiva del Estado de Puebla 2012-2019
 
 ```{r}
 mort_year_edo_dt(dataset = mortalidad_general_21,
@@ -57,7 +58,7 @@ mort_year_edo_dt(dataset = mortalidad_general_21,
 ```
 
 
-## Mortalidad para la población postproductiva 2012-2019
+## Mortalidad para la población postproductiva del Estado de Puebla 2012-2019
 
 ```{r}
 mort_year_edo_dt(dataset = mortalidad_general_21,
@@ -68,7 +69,7 @@ mort_year_edo_dt(dataset = mortalidad_general_21,
 
 
 
-## Mortalidad para la población pediátrica 2012-2019
+## Mortalidad para la población pediátrica del Estado de Puebla 2012-2019
 
 ```{r}
 mort_year_edo_dt(dataset = mortalidad_general_21,
@@ -78,7 +79,7 @@ mort_year_edo_dt(dataset = mortalidad_general_21,
 ```
 
 
-## Mortalidad para la población infantil 2012-2019
+## Mortalidad para la población infantil del Estado de Puebla 2012-2019
 
 ```{r}
 mort_year_edo_dt(dataset = mortalidad_general_21,
@@ -86,4 +87,109 @@ mort_year_edo_dt(dataset = mortalidad_general_21,
                  cve_edo = "21", 
                  cat_group = "infantil")
 ```
+
+
+## Mortalidad general del Municipio Puebla 2012-2019
+
+```{r}
+mort_year_mpo_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114")
+```
+
+# Mortalidad por Municipio
+
+## Mortalidad en la problación productiva del Municipio Puebla 2012-2019
+
+```{r}
+mort_year_mpo_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cat_group = "productiva")
+```
+
+
+## Mortalidad en la problación postproductiva del Municipio Puebla 2012-2019
+
+```{r}
+mort_year_mpo_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cat_group = "post_productiva")
+```
+
+
+## Mortalidad en la problación pediátrica del Municipio Puebla 2012-2019
+
+```{r}
+mort_year_mpo_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cat_group = "pediatrica")
+```
+
+
+## Mortalidad en la problación infantil del Municipio Puebla 2012-2019
+
+```{r}
+mort_year_mpo_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cat_group = "infantil")
+```
+
+# Mortalidad por localidad
+
+## Mortalidad en la problación productiva de la localidad de Puebla 2012-2019
+
+```{r}
+mort_year_loc_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cve_loc = "0001",
+                 cat_group = "productiva")
+```
+
+
+## Mortalidad en la problación postproductiva de la localidad de Puebla 2012-2019
+
+```{r}
+mort_year_loc_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cve_loc = "0001",
+                 cat_group = "post_productiva")
+```
+
+
+## Mortalidad en la problación pediátrica de la localidad de Puebla 2012-2019
+
+```{r}
+mort_year_loc_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cve_loc = "0001",
+                 cat_group = "pediatrica")
+```
+
+
+## Mortalidad en la problación infantil de la localidad de Puebla 2012-2019
+
+```{r}
+mort_year_loc_dt(dataset = mortalidad_general_21,
+                 years = 2012:2019, 
+                 cve_edo = "21",
+                 cve_mpo = "114",
+                 cve_loc = "0001",
+                 cat_group = "infantil")
+```
+
 
