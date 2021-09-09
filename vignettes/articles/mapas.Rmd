@@ -1,5 +1,5 @@
 ---
-title: "mapas"
+title:  <span style="color:#003300;">**mapas**</span>
 ---
 
 ```{r, include = FALSE}
@@ -9,6 +9,28 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+Tradicionalmente Las secretarías de salud de los estados o municipios usan en sus informes de diagnósticos de salud tablas, sin embargo también podrían presentarse mapas del número de defunciones por estado. El paquete **healthdiagr** tiene las funciones *mort_year_edo_map* y *mort_year_mpo_map* para generar los mapas nivel de estado y municipio, respectivamente.
+
+
+# **<span style="color:#003300;">Mortalidad por Estado</span>**
+
+Los mapas de la mortalidad por estado se generan con la función *mort_year_edo_map*. Esta función contiene seis argumentos: 
+**<span style="color:#7d9029">dataset</span>**, *years*, *cve_edo*, *cat_group = NULL*, *cve_def = NULL*, y *static_map*.
+
+## **<span style="color:#003300;">Mortalidad general del Estado de Puebla 2019</span>**
+
+```{r}
 ```{r setup}
 library(healthdiagr)
+mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
+                  year = 2019,
+                  cve_edo = "21",
+                  static_map = TRUE,
+                  cat_group = NULL,
+                  cve_def = NULL)
 ```
+
+
+
+

@@ -105,7 +105,7 @@ mort_year_edo_map <- function(dataset, years,
                                dplyr::filter(CVE_ENT %in% c(cve_edo)),
                            y = x,
                            by = c("CVE_ENT" = "ent_ocurr",
-                                  "CVE_MUN" = "mun_ocurr")) %>%
+                                  "CVE_MUN" = "mun_ocurr"))  |>
         tidyr::pivot_longer(cols = dplyr::starts_with("20"))
 
     if(static_map == TRUE){
@@ -156,18 +156,18 @@ mort_year_edo_map <- function(dataset, years,
 
         esri <- grep("^Esri|CartoDB|OpenStreetMap", leaflet::providers, value = TRUE)
         for (provider in esri) {
-            l <- l %>% leaflet::addProviderTiles(provider,
+            l <- l  |> leaflet::addProviderTiles(provider,
                                                  group = provider)
         }
 
-        l %>%
+        l  |>
             leaflet::addLayersControl(baseGroups = names(esri),
                                       options = leaflet::layersControlOptions(collapsed = TRUE),
-                                      overlayGroups = c("defunciones")) %>%
+                                      overlayGroups = c("defunciones"))  |>
             leaflet::addMiniMap(tiles = esri[[1]],
                                 toggleDisplay = TRUE,
                                 minimized = TRUE,
-                                position = "bottomleft") %>%
+                                position = "bottomleft")  |>
             htmlwidgets::onRender("
     function(el, x) {
       var myMap = this;
