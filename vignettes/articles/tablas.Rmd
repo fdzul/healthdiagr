@@ -43,7 +43,8 @@ healthdiag::mort_year_edo_dt(dataset = mortalidad_general_21,
 ```{r}
 
 mort_year_edo_dt(dataset = mortalidad_general_21,
-                 years = 2012:2019, cve_edo = "21")
+                 years = 2019, 
+                 cve_edo = "21")
 ```
 
 
