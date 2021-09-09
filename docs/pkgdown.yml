@@ -2,7 +2,11 @@ pandoc: 2.11.4
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
+  articles/mapas: mapas.html
   articles/maps: maps.html
+  articles/tablas: tablas.html
+  articles/tables: tables.html
   Mortalidad: Mortalidad.html
-last_built: 2021-09-09T03:34Z
+  Mortality: Mortality.html
+last_built: 2021-09-09T13:21Z
 
