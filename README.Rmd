@@ -62,7 +62,7 @@ devtools::install_github("fdzul/healthdiagr")
 
 ## Example
 
-This is a basic example which shows you how to solve a load the dataset in R:
+This is a basic example which shows you how load the mortality dataset in R:
 
 ```{r example}
 library(healthdiagr)

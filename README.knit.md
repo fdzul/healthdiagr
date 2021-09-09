@@ -1,44 +1,38 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
 
 # healthdiagr
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-*The goal of healthdiagr is a package developed in the department of
-prevention and control of diseases transmitted by vector of the
-[Secretary of Health of Veracruz](https://www.ssaver.gob.mx/) and with
-colaboration of the federal level.*
+*The goal of healthdiagr is a package developed in the department of prevention and control of diseases transmitted by vector of the [Secretary of Health of Veracruz](https://www.ssaver.gob.mx/) and with colaboration of the federal level.*
 
 ### **overview**
 
-**healthdiagr** is a package designed to generate a health diagnosis of
-the mortality of a state, municipality or locality using data from the
-[INEGI](https://www.inegi.org.mx/programas/mortalidad/#Datos_abiertos).
-The package contain the mortality of Puebla state (with the updates we
-add all states) and the functions for generate the tables, static and
-interactive maps.
+**healthdiagr** is a package designed to generate a health diagnosis of the mortality of a state, municipality or locality using data from the [INEGI](https://www.inegi.org.mx/programas/mortalidad/#Datos_abiertos). The package contain the mortality of Puebla state (with the updates we add all states) and the functions for generate the tables, static and interactive maps.
+
 
 **Datasets**
 
--   **`mortalidad_general_21`** Mortality of Puebla State (2012\_2019).
+  - **`mortalidad_general_21`** Mortality of Puebla State (2012_2019).
 
 **Functions**
 
--   **`mort_year_edo_dt`** Generates tables of causes of death from 2012
-    to 2019 at the state level.
-
--   **`mort_year_mpo_dt`** generates tables of causes of death from 2012
-    to 2019 at the municipality level.
-
--   **`mort_year_loc_dt`** Generates tables of causes of death from 2012
-    to 2019 at the locality level.
+  - **`mort_year_edo_dt`** Generates tables of causes of death from 2012 to 2019 at the state level.
+  
+  - **`mort_year_mpo_dt`** generates tables of causes of death from 2012 to 2019 at the municipality level.
+  
+  - **`mort_year_loc_dt`** Generates tables of causes of death from 2012 to 2019 at the locality level.
 
 ## Installation
 
-You can install the released version of healthdiagr from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the released version of healthdiagr from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 #install.packages("healthdiagr")
@@ -46,14 +40,12 @@ You can install the released version of healthdiagr from
 
 ## Development version
 
-To get a bug fix, or use a feature from the development version, you can
-install boldenr from GitHub.
+To get a bug fix, or use a feature from the development version, you can install boldenr from GitHub.
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("fdzul/healthdiagr")
 ```
-
 or
 
 ``` r
@@ -63,10 +55,10 @@ devtools::install_github("fdzul/healthdiagr")
 
 ## Example
 
-This is a basic example which shows you how load the mortality dataset
-in R:
+This is a basic example which shows you how load the mortality dataset in R:
 
-``` r
+
+```r
 library(healthdiagr)
 head(healthdiagr::mortalidad_general_21)
 #>   ent_ocurr mun_ocurr loc_ocurr causa_def_cve lista_mex_cve   sexo edad_cve
@@ -108,39 +100,36 @@ head(healthdiagr::mortalidad_general_21)
 
 ## Authors
 
--   **Felipe Antonio Dzul Manzanilla** -**<https://github.com/fdzul>** -
-    Packages developed in github:
+* **Felipe Antonio Dzul Manzanilla** -**https://github.com/fdzul** - Packages developed in github:
 
-    1.  [denhotspots](https://github.com/fdzul/denhotspots).
-    2.  [boldenr](https://github.com/fdzul/boldenr).
-    3.  [dendata](https://github.com/fdzul/dendata).
-    4.  [deneggs](https://github.com/fdzul/deneggs).
-    5.  [rgeomex](https://github.com/fdzul/rgeomex).
-    6.  [covid19mx](https://github.com/fdzul/covid19mx).
+  1) [denhotspots](https://github.com/fdzul/denhotspots). 
+  2) [boldenr](https://github.com/fdzul/boldenr). 
+  3) [dendata](https://github.com/fdzul/dendata).
+  4) [deneggs](https://github.com/fdzul/deneggs).
+  5) [rgeomex](https://github.com/fdzul/rgeomex).
+  6) [covid19mx](https://github.com/fdzul/covid19mx).
 
-See also the list of
-[contributors](https://github.com/fdzul/deneggs/contributors) who
-participated in this project.
+
+See also the list of [contributors](https://github.com/fdzul/deneggs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the
-[LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 
 ## Inspiration
 
-The package was inspired by the need to contribute to generate health
-diagnoses at the state, municipality and local level.
+The package was inspired by the need to contribute to generate health diagnoses at the state, municipality and local level.
 
 ## Getting help
 
 If you encounter a clear bug, please file a minimal reproducible example
 on [github](https://github.com/fdzul/healthdiagr/issues). For questions
-and other discussion, please feel free to contact me
-(<felipe.dzul.m@gmail.com>)
+and other discussion, please feel free to contact me (felipe.dzul.m@gmail.com)
 
-------------------------------------------------------------------------
+-----
 
 Please note that this project is released with a [Contributor Code of
 Conduct](https://dplyr.tidyverse.org/CODE_OF_CONDUCT). By participating
 in this project you agree to abide by its terms.
+
