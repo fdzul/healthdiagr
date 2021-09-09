@@ -9,6 +9,24 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+Las secretarías de salud de los estados o municipios, cuando realizan un diagnóstico de salud incluyen varios apartados en el documento, especificamente en el apartado de mortalidad se proporcionan por lo general las siguientes tablas:
+
+  - Mortalidad general
+ 
+  - Mortalidad para la población reproductiva
+ 
+  - Mortalidad para la población posproductiva
+  
+  - Mortalidad pediátrica
+  
+  - Mortalidad infantil
+  
+  - Mortalidad materna
+
+
+Para calcular todas estas tables (excepto mortalidad materna), se usaran los siguientes
+
 ```{r setup}
 library(healthdiagr)
 ```
