@@ -79,7 +79,24 @@
 <a href="#healthdiagr" class="anchor"></a>healthdiagr</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of healthdiagr is to …</p>
+<p><em>The goal of healthdiagr is a package developed in the department of prevention and control of diseases transmitted by vector of the <a href="https://www.ssaver.gob.mx/">Secretary of Health of Veracruz</a> and with colaboration of the federal level.</em></p>
+<div id="overview" class="section level3">
+<h3 class="hasAnchor">
+<a href="#overview" class="anchor"></a><strong>overview</strong>
+</h3>
+<p><strong>healthdiagr</strong> is a package designed to generate a health diagnosis of the mortality of a state, municipality or locality using data from the <a href="https://www.inegi.org.mx/programas/mortalidad/#Datos_abiertos">INEGI</a>. The package contain the mortality of Puebla state (with the updates we add all states) and the functions for generate the tables, static and interactive maps.</p>
+<p><strong>Datasets</strong></p>
+<ul>
+<li>
+<strong><code>mortalidad_general_21</code></strong> Mortality of Puebla State (2012_2019).</li>
+</ul>
+<p><strong>Functions</strong></p>
+<ul>
+<li><p><strong><code>mort_year_edo_dt</code></strong> Generates tables of causes of death from 2012 to 2019 at the state level.</p></li>
+<li><p><strong><code>mort_year_mpo_dt</code></strong> generates tables of causes of death from 2012 to 2019 at the municipality level.</p></li>
+<li><p><strong><code>mort_year_loc_dt</code></strong> Generates tables of causes of death from 2012 to 2019 at the locality level.</p></li>
+</ul>
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -87,27 +104,78 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#install.packages("healthdiagr")</span></code></pre></div>
 </div>
+<div id="development-version" class="section level2">
+<h2 class="hasAnchor">
+<a href="#development-version" class="anchor"></a>Development version</h2>
+<p>To get a bug fix, or use a feature from the development version, you can install boldenr from GitHub.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"fdzul/healthdiagr"</span><span class="op">)</span></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"fdzul/healthdiagr"</span><span class="op">)</span></code></pre></div>
+</div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<p>This is a basic example which shows you how to solve a load the dataset in R:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">healthdiagr</span><span class="op">)</span>
-<span class="co">## basic example code</span></code></pre></div>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span>
-<span class="co">#&gt;      speed           dist       </span>
-<span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span>
-<span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span>
-<span class="co">#&gt;  Median :15.0   Median : 36.00  </span>
-<span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span>
-<span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span>
-<span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date. <code><a href="https://devtools.r-lib.org//reference/build_rmd.html">devtools::build_readme()</a></code> is handy for this. You could also use GitHub Actions to re-render <code>README.Rmd</code> every time you push. An example workflow can be found here: <a href="https://github.com/r-lib/actions/tree/master/examples" class="uri">https://github.com/r-lib/actions/tree/master/examples</a>.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub and CRAN.</p>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">healthdiagr</span><span class="fu">::</span><span class="va"><a href="reference/mortalidad_general_21.html">mortalidad_general_21</a></span><span class="op">)</span>
+<span class="co">#&gt;   ent_ocurr mun_ocurr loc_ocurr causa_def_cve lista_mex_cve   sexo edad_cve</span>
+<span class="co">#&gt; 1        21       011      0001          I219           28A Hombre     4053</span>
+<span class="co">#&gt; 2        21       085      0001          I619           30B  Mujer     4062</span>
+<span class="co">#&gt; 3        21       005      9999          X700            54  Mujer     4014</span>
+<span class="co">#&gt; 4        21       051      0012          V892           49B Hombre     4010</span>
+<span class="co">#&gt; 5        21       114      0001          V892           49B Hombre     4019</span>
+<span class="co">#&gt; 6        21       082      0001          G932           23Z Hombre     4082</span>
+<span class="co">#&gt;   anio_ocur anio_nacim ocupacion_cve escolaridad_cve</span>
+<span class="co">#&gt; 1      2012       1959            41               4</span>
+<span class="co">#&gt; 2      2012       1950             2               1</span>
+<span class="co">#&gt; 3      2012       1998             2               5</span>
+<span class="co">#&gt; 4      2012       2002             2               3</span>
+<span class="co">#&gt; 5      2012       1993            72               6</span>
+<span class="co">#&gt; 6      2012       1930            41               4</span>
+<span class="co">#&gt;                                                                                         causa_def_des</span>
+<span class="co">#&gt; 1                                               Infarto agudo del miocardio, sin otra especificaciÃ³n</span>
+<span class="co">#&gt; 2                                                        Hemorragia intraencefÃ¡lica, no especificada</span>
+<span class="co">#&gt; 3 LesiÃ³n autoinfligida intencionalmente por ahorcamiento, estrangulamiento o sofocaciÃ³n en vivienda</span>
+<span class="co">#&gt; 4                  Persona lesionada en accidente de trÃ¡nsito, de vehÃ­culo de motor no especificado</span>
+<span class="co">#&gt; 5                  Persona lesionada en accidente de trÃ¡nsito, de vehÃ­culo de motor no especificado</span>
+<span class="co">#&gt; 6                                                                  HipertensiÃ³n intracraneal benigna</span>
+<span class="co">#&gt;         escolaridad_des              ocupacion_des              edad_des</span>
+<span class="co">#&gt; 1     Primaria completa                       &lt;NA&gt; Cincuenta y tres años</span>
+<span class="co">#&gt; 2       Sin escolaridad Profesionistas y tÃ©cnicos    Sesenta y dos años</span>
+<span class="co">#&gt; 3 Secundaria incompleta Profesionistas y tÃ©cnicos          Catorce años</span>
+<span class="co">#&gt; 4   Primaria incompleta Profesionistas y tÃ©cnicos             Diez años</span>
+<span class="co">#&gt; 5   Secundaria completa                       &lt;NA&gt;       Diecinueve años</span>
+<span class="co">#&gt; 6     Primaria completa                       &lt;NA&gt;    Ochenta y dos años</span>
+<span class="co">#&gt;                                                                  lista_mex_des</span>
+<span class="co">#&gt; 1                                                  Infarto agudo del miocardio</span>
+<span class="co">#&gt; 2 Hemorragia intraencefálica y otras hemorragias intracraneales no traumáticas</span>
+<span class="co">#&gt; 3                                     Lesiones autoinfligidas intencionalmente</span>
+<span class="co">#&gt; 4                                  Accidentes de tráfico de vehículos de motor</span>
+<span class="co">#&gt; 5                                  Accidentes de tráfico de vehículos de motor</span>
+<span class="co">#&gt; 6                                  Las demás enfermedades del sistema nervioso</span></code></pre></div>
+<p>See also the list of <a href="https://github.com/fdzul/deneggs/contributors">contributors</a> who participated in this project.</p>
+</div>
+<div id="license" class="section level2">
+<h2 class="hasAnchor">
+<a href="#license" class="anchor"></a>License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.html">LICENSE.md</a> file for details</p>
+</div>
+<div id="inspiration" class="section level2">
+<h2 class="hasAnchor">
+<a href="#inspiration" class="anchor"></a>Inspiration</h2>
+<p>The package was inspired by the need to contribute to generate health diagnoses at the state, municipality and local level.</p>
+</div>
+<div id="getting-help" class="section level2">
+<h2 class="hasAnchor">
+<a href="#getting-help" class="anchor"></a>Getting help</h2>
+<p>If you encounter a clear bug, please file a minimal reproducible example on <a href="https://github.com/fdzul/healthdiagr/issues">github</a>. For questions and other discussion, please feel free to contact me (<a href="mailto:felipe.dzul.m@gmail.com" class="email">felipe.dzul.m@gmail.com</a>)</p>
+<hr>
+<p>Please note that this project is released with a <a href="https://dplyr.tidyverse.org/CODE_OF_CONDUCT">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
