@@ -30,8 +30,11 @@ knitr::opts_chunk$set(
   - **`mortalidad_general_21`** Mortality of Puebla State (2012_2019).
 
 **Functions**
+
   - **`mort_year_edo_dt`** Generates tables of causes of death from 2012 to 2019 at the state level.
+  
   - **`mort_year_mpo_dt`** generates tables of causes of death from 2012 to 2019 at the municipality level.
+  
   - **`mort_year_loc_dt`** Generates tables of causes of death from 2012 to 2019 at the locality level.
 
 ## Installation
