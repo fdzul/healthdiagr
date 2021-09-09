@@ -19,9 +19,9 @@ mort_year_loc_dt <- function(dataset, years, cve_edo, cve_mpo, cve_loc, cat_grou
             dplyr::filter(anio_ocur %in% c(years))|>
             dplyr::filter(mun_ocurr %in% c(cve_mpo)) |>
             dplyr::filter(loc_ocurr %in% c(cve_loc))|>
-            dplyr::group_by(lista_mex_des, anio_ocur)|>
+            dplyr::group_by(lista_mex_des, lista_mex_cve, anio_ocur)|>
             dplyr::summarise(n = dplyr::n(), .groups = "drop") |>
-            tidyr::pivot_wider(id_cols = c(lista_mex_des),
+            tidyr::pivot_wider(id_cols = c(lista_mex_des, lista_mex_cve),
                                names_from = anio_ocur,
                                values_from = n,
                                names_sort = TRUE,
@@ -60,9 +60,9 @@ mort_year_loc_dt <- function(dataset, years, cve_edo, cve_mpo, cve_loc, cat_grou
             dplyr::filter(loc_ocurr %in% c(cve_loc))|>
             dplyr::filter(anio_ocur %in% c(years)) |>
             dplyr::filter(edad_des %in% c(vec)) |>
-            dplyr::group_by(lista_mex_des, anio_ocur) |>
+            dplyr::group_by(lista_mex_des, lista_mex_cve, anio_ocur) |>
             dplyr::summarise(n = dplyr::n(), .groups = "drop") |>
-            tidyr::pivot_wider(id_cols = c(lista_mex_des),
+            tidyr::pivot_wider(id_cols = c(lista_mex_des, lista_mex_cve),
                                names_from = anio_ocur,
                                values_from = n,
                                names_sort = TRUE,
@@ -74,7 +74,8 @@ mort_year_loc_dt <- function(dataset, years, cve_edo, cve_mpo, cve_loc, cat_grou
         rowSums()
     x |>
         dplyr::arrange(dplyr::desc(total)) |>
-        dplyr::rename("Causa de Defuncion" = lista_mex_des)|>
+        dplyr::rename("Causa de Defuncion" = lista_mex_des,
+                      "Clave" = lista_mex_cve)|>
         kableExtra::kable() |>
         kableExtra::kable_styling() |>
         kableExtra:: scroll_box(width = "100%", height = "600px")
