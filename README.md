@@ -44,8 +44,10 @@ You can install the released version of healthdiagr from
 #install.packages("healthdiagr")
 ```
 
-Development version To get a bug fix, or use a feature from the
-development version, you can install boldenr from GitHub.
+## Development version
+
+To get a bug fix, or use a feature from the development version, you can
+install boldenr from GitHub.
 
 ``` r
 # install.packages("remotes")

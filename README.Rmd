@@ -45,7 +45,8 @@ You can install the released version of healthdiagr from [CRAN](https://CRAN.R-p
 #install.packages("healthdiagr")
 ```
 
-Development version
+## Development version
+
 To get a bug fix, or use a feature from the development version, you can install boldenr from GitHub.
 
 ``` r
