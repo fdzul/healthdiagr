@@ -106,6 +106,18 @@ head(healthdiagr::mortalidad_general_21)
 #> 6                                  Las demás enfermedades del sistema nervioso
 ```
 
+## Authors
+
+-   **Felipe Antonio Dzul Manzanilla** -**<https://github.com/fdzul>** -
+    Packages developed in github:
+
+    1.  [denhotspots](https://github.com/fdzul/denhotspots).
+    2.  [boldenr](https://github.com/fdzul/boldenr).
+    3.  [dendata](https://github.com/fdzul/dendata).
+    4.  [deneggs](https://github.com/fdzul/deneggs).
+    5.  [rgeomex](https://github.com/fdzul/rgeomex).
+    6.  [covid19mx](https://github.com/fdzul/covid19mx).
+
 See also the list of
 [contributors](https://github.com/fdzul/deneggs/contributors) who
 participated in this project.
