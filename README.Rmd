@@ -18,7 +18,21 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of healthdiagr is to ...
+*The goal of healthdiagr is a package developed in the department of prevention and control of diseases transmitted by vector of the [Secretary of Health of Veracruz](https://www.ssaver.gob.mx/) and with colaboration of the federal level.*
+
+### **overview**
+
+**healthdiagr** is a package designed to generate a health diagnosis of the mortality of a state, municipality or locality using data from the [INEGI](https://www.inegi.org.mx/programas/mortalidad/#Datos_abiertos). The package contain the mortality of Puebla state (with the updates we add all states) and the functions for generate the tables, static and interactive maps.
+
+
+*Datasets*
+
+  - **`mortalidad_general_21`** Mortality of Puebla State (2012_2019).
+
+**Functions**
+  - **`mort_year_edo_dt`** Generates tables of causes of death from 2012 to 2019 at the state level.
+  - **`mort_year_mpo_dt`** generates tables of causes of death from 2012 to 2019 at the municipality level.
+  - **`mort_year_loc_dt`** Generates tables of causes of death from 2012 to 2019 at the locality level.
 
 ## Installation
 
@@ -28,27 +42,51 @@ You can install the released version of healthdiagr from [CRAN](https://CRAN.R-p
 #install.packages("healthdiagr")
 ```
 
+Development version
+To get a bug fix, or use a feature from the development version, you can install boldenr from GitHub.
+
+``` r
+# install.packages("remotes")
+remotes::install_github("fdzul/healthdiagr")
+```
+or
+
+``` r
+# install.packages("devtools")
+devtools::install_github("fdzul/healthdiagr")
+```
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a load the dataset in R:
 
 ```{r example}
 library(healthdiagr)
-## basic example code
+head(healthdiagr::mortalidad_general_21)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
-```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
+See also the list of [contributors](https://github.com/fdzul/deneggs/contributors) who participated in this project.
 
-You can also embed plots, for example:
+## License
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+
+## Inspiration
+
+The package was inspired by the need to contribute to generate health diagnoses at the state, municipality and local level.
+
+## Getting help
+
+If you encounter a clear bug, please file a minimal reproducible example
+on [github](https://github.com/fdzul/healthdiagr/issues). For questions
+and other discussion, please feel free to contact me (felipe.dzul.m@gmail.com)
+
+-----
+
+Please note that this project is released with a [Contributor Code of
+Conduct](https://dplyr.tidyverse.org/CODE_OF_CONDUCT). By participating
+in this project you agree to abide by its terms.
+
