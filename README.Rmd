@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 **healthdiagr** is a package designed to generate a health diagnosis of the mortality of a state, municipality or locality using data from the [INEGI](https://www.inegi.org.mx/programas/mortalidad/#Datos_abiertos). The package contain the mortality of Puebla state (with the updates we add all states) and the functions for generate the tables, static and interactive maps.
 
 
-*Datasets*
+**Datasets**
 
   - **`mortalidad_general_21`** Mortality of Puebla State (2012_2019).
 
