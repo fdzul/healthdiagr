@@ -1,12 +1,15 @@
 Package: healthdiagr
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Mortality of the state of Puebla
+Version: 0.0.0.9000
+Author: Felipe Antonio Dzul Manzanilla
+Maintainer: The package maintainer <felipe.dzul.m@gmail.com>
+Authors@R: 
+    person(given = "Felipe Antonio",
+           family = "Dzul Manzanilla",
+           role = c("aut", "cre"),
+           email = "felipe.dzul.m@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0002-2085-9141"))
+Description: a package that provides the general mortality of the state of Puebla.
 Encoding: UTF-8
 LazyData: true
 Depends: 
