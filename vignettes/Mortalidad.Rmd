@@ -1,5 +1,5 @@
 ---
-title: "Datos de Mortalidad General del INEGI"
+title: "Mortalidad"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Mortalidad}
