@@ -18,11 +18,26 @@ Tradicionalmente Las secretarías de salud de los estados o municipios usan en s
 Los mapas de la mortalidad por estado se generan con la función *mort_year_edo_map*. Esta función contiene seis argumentos: 
 **<span style="color:#7d9029">dataset</span>**, *years*, *cve_edo*, *cat_group = NULL*, *cve_def = NULL*, y *static_map*.
 
-## **<span style="color:#003300;">Mortalidad general del Estado de Puebla 2019</span>**
+```{r, echo=FALSE}
+d <- data.frame(Argumento = c("dataset", "years", "cve_edo", "cat_group",
+                              "cve_def", "static_map"),
+                Definición = c("Es la base de datos de mortalidad",
+                               "Es el año que se desea analizar o mapear",
+                               "es la clave del estado",
+                               "el categoria de mortalidad que se desea analizar. Las opciones son productiva, post_productiva, infantil, pediatrica. Cuando cat_group == NULL proporciona la mortalidad general",
+                               "es la clave de la causa de defuncion de la lista mexicana de enfermedads. En las tablas se proporciona la causa y la clave de la mortalidad",
+                               "Es una valor lógico (TRUE o FALSE), para indicar si el mapa es estatico (T) o interactivo."))
+kableExtra::kable(d) |>
+     kableExtra::kable_classic(full_width = F)
 
-```{r}
-```{r setup}
+```
+
+
+## **<span style="color:#003300;">Mortalidad general del Estado de Puebla 2019</span>**
+```{r, warning=FALSE, message=FALSE}
 library(healthdiagr)
+library(magrittr)
+library(sf)
 mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
                   year = 2019,
                   cve_edo = "21",
@@ -32,5 +47,13 @@ mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
 ```
 
 
+## **<span style="color:#003300;">Mortalidad general del Estado de Puebla 2018</span>**
+```{r,  warning=FALSE, message=FALSE}
+mort_year_edo_map(dataset = healthdiagr::mortalidad_general_21,
+                  year = 2018, 
+                  cve_edo = "21",
+                  static_map = FALSE, 
+                  cat_group = NULL,
+                  cve_def = NULL)
 
-
+```
