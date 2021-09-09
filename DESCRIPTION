@@ -20,3 +20,6 @@ Suggests:
     knitr
 VignetteBuilder: knitr
 License: MIT + file LICENSE
+Imports: 
+    remotes,
+    devtools
